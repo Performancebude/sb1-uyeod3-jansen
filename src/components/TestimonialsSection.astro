@@ -1,0 +1,30 @@
+---
+import TestimonialCard from './TestimonialCard.astro';
+
+const testimonials = [
+  {
+    quote: "Dr. Jensen liefert stets fundierte und nachvollziehbare Gutachten, die eine wertvolle Grundlage für unsere Entscheidungsfindung darstellen.",
+    author: "Dr. Michael Weber",
+    role: "Vorsitzender Richter, Landgericht Berlin"
+  },
+  {
+    quote: "Die professionelle Arbeitsweise und die klare Kommunikation machen die Zusammenarbeit besonders effektiv.",
+    author: "Dr. Sarah Schmidt",
+    role: "Staatsanwältin"
+  },
+  {
+    quote: "Ihre Expertise und wissenschaftliche Methodik sind beeindruckend und haben in komplexen Fällen wesentlich zur Wahrheitsfindung beigetragen.",
+    author: "Prof. Dr. Thomas Müller",
+    role: "Fachanwalt für Strafrecht"
+  }
+];
+---
+
+<section class="max-w-6xl mx-auto px-4 py-16">
+  <h2 class="text-3xl font-semibold mb-12 text-center">Stimmen aus der Praxis</h2>
+  <div class="grid md:grid-cols-3 gap-8">
+    {testimonials.map(testimonial => (
+      <TestimonialCard {...testimonial} />
+    ))}
+  </div>
+</section>

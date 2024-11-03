@@ -1,0 +1,35 @@
+---
+interface Props {
+  title?: string;
+}
+
+const { title = "Über Dr. Anastasia Jensen" } = Astro.props;
+---
+
+<section class="max-w-6xl mx-auto px-4 py-16">
+  <div class="grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h2 class="text-3xl font-semibold mb-6">{title}</h2>
+      <div class="prose">
+        <p class="text-lg mb-4">
+          Mit über 15 Jahren Erfahrung in der forensischen Begutachtung biete ich fundierte Expertise im Bereich der psychologischen und psychiatrischen Sachverständigentätigkeit.
+        </p>
+        <ul class="space-y-2">
+          <li>Promotion in Forensischer Psychologie an der Humboldt-Universität zu Berlin</li>
+          <li>Zertifizierte Sachverständige für forensische Psychologie</li>
+          <li>Mitglied der Deutschen Gesellschaft für Psychiatrie und Psychotherapie</li>
+          <li>Regelmäßige Gutachtertätigkeit für Gerichte in ganz Deutschland</li>
+        </ul>
+      </div>
+    </div>
+    <div class="relative">
+      <img
+        src="/images/expert.jpg"
+        alt="Dr. Anastasia Jensen"
+        class="rounded-lg shadow-lg"
+        width="600"
+        height="800"
+      />
+    </div>
+  </div>
+</section>
